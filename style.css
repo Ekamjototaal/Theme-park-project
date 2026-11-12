@@ -1,0 +1,542 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fffaf0;
+    color: #252545;
+}
+
+/* NAVBAR */
+
+header {
+    background: #172554;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 6%;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffcf33;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffcf33;
+}
+
+.nav-btn {
+    background: #ff9f1c;
+    color: #172554;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 580px;
+    background:
+        linear-gradient(rgba(10,20,50,0.55),
+                        rgba(10,20,50,0.55)),
+        url("images/hero.jpg");
+
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    color: #ffcf33;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    margin-right: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #ff9f1c;
+    color: #172554;
+}
+
+.secondary-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-4px);
+}
+
+/* FEATURES */
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 35px 5%;
+    background: #172554;
+    color: white;
+}
+
+.feature h2 {
+    color: #ffcf33;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+    padding: 75px 7%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    color: #172554;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* RIDES */
+
+.ride-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.ride-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.ride-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.ride-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.ride-info {
+    padding: 22px;
+}
+
+.ride-info h3 {
+    color: #f07818;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.ride-info p {
+    margin: 9px 0;
+    color: #555;
+}
+
+/* WATER PARK */
+
+.water-section {
+    min-height: 350px;
+    padding: 70px 8%;
+    background:
+        linear-gradient(rgba(0,60,120,0.65),
+                        rgba(0,60,120,0.65)),
+        url("images/waterpark.jpg");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.water-section div {
+    max-width: 650px;
+}
+
+.water-section h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.water-section p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* BOOKING */
+
+.booking-section {
+    background: #fff1d6;
+}
+
+.booking-container {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+#bookingForm > label {
+    display: block;
+    font-weight: 600;
+    margin: 18px 0 8px;
+}
+
+#bookingForm input:not([type="checkbox"]),
+#bookingForm select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+#bookingForm input:focus,
+#bookingForm select:focus {
+    outline: 2px solid #ff9f1c;
+}
+
+#bookingForm h3 {
+    margin: 25px 0 15px;
+}
+
+.addon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.addon input {
+    width: 17px;
+    height: 17px;
+    accent-color: #ff9f1c;
+}
+
+.addon label {
+    cursor: pointer;
+}
+
+/* PRICE BOX */
+
+.price-box {
+    background: #fff5df;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 25px;
+}
+
+.price-box p {
+    margin: 12px 0;
+}
+
+.price-box h2 {
+    color: #e66c00;
+    margin-top: 15px;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 16px;
+    margin-top: 25px;
+    border: none;
+    background: #ff8c00;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background: #e66c00;
+}
+
+/* ABOUT */
+
+.about-section {
+    text-align: center;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 25px auto 0;
+    line-height: 1.8;
+    color: #555;
+    font-size: 17px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer h2 {
+    color: #ffcf33;
+    margin-bottom: 12px;
+}
+
+footer p {
+    margin: 10px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .ride-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .ride-container {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .section {
+        padding: 50px 5%;
+    }
+
+    .booking-container {
+        padding: 20px;
+    }
+}
+
+.hero {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+/* Background Video */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Dark Overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+/* ABOUT SECTION */
+
+.about-section {
+    padding: 60px 8%;
+}
+
+.about-container {
+    margin-top: 50px;
+}
+
+/* Each Row */
+
+.about-row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    margin-bottom: 80px;
+}
+
+/* Reverse the second row */
+
+.about-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Image */
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 350px;
+
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Content */
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .about-row,
+    .about-row.reverse {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-image img {
+        height: 250px;
+    }
+
+    .about-content h2 {
+        font-size: 24px;
+    }
+
+}
+.about-row.reverse {
+    flex-direction: row-reverse;
+}
+.about-row {
+    display: flex;
+}
